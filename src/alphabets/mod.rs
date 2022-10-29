@@ -1,6 +1,7 @@
 // Adding the reference to the class here
 pub mod korean;
 
+
 use std::{collections::HashMap, fs::File, io::BufReader};
 use serde::{Deserialize};
 use std::error::Error;
@@ -37,3 +38,4 @@ pub fn parse_from_csv(filename:&str) -> Result<HashMap<char, String>, Box<dyn Er
     
     Ok(map)
 }
+

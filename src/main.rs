@@ -2,6 +2,7 @@
 mod alphabets;
 //use alphabets::Alphabet;
 
+
 use console::style;
 use console::Style;
 
@@ -15,6 +16,7 @@ fn main() {
     
     let mut state = GameState {score: 0};
 
+
     let random_data = alphabets::parse_from_csv("data/korean.csv").unwrap();
     // The old static data
     let _korean_data = alphabets::korean::KoreanData::new();
@@ -27,6 +29,7 @@ fn main() {
         let _ = std::io::stdin().read_line(&mut line).unwrap();
         
         let mut style = Style::new();
+
         if line.trim().eq(&value)
         {
             state.score += 1;
